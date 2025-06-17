@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>➰𝓵𝓮𝓿𝟭𝓷𝓮</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on ➰𝓵𝓮𝓿𝟭𝓷𝓮</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 17 Jun 2025 22:01:00 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>欢迎体验我的博客！</title>
+      <link>http://localhost:1313/posts/hello-world/</link>
+      <pubDate>Tue, 17 Jun 2025 22:01:00 +0900</pubDate>
+      <guid>http://localhost:1313/posts/hello-world/</guid>
+      <description>&lt;p&gt;这是我的第一篇博客文章！很高兴能与大家分享我的想法。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
