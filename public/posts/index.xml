@@ -13,7 +13,14 @@
       <link>http://localhost:1313/posts/hello-world/</link>
       <pubDate>Tue, 17 Jun 2025 22:01:00 +0900</pubDate>
       <guid>http://localhost:1313/posts/hello-world/</guid>
-      <description>&lt;p&gt;这是我的第一篇博客文章！很高兴能与大家分享我的想法。&lt;/p&gt;</description>
+      <description>&lt;p&gt;这是我的第一篇博客文章！很高兴能与大家分享我的想法。测试一下&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>【PT】刷流机部署！</title>
+      <link>http://localhost:1313/posts/pt%E5%88%B7%E6%B5%81%E6%9C%BA%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Thu, 15 Jun 2023 22:01:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/pt%E5%88%B7%E6%B5%81%E6%9C%BA%E9%83%A8%E7%BD%B2/</guid>
+      <description>&lt;h2 id=&#34;pt刷流机部署&#34;&gt;【PT】刷流机部署&lt;/h2&gt;&#xA;&lt;h3 id=&#34;部署环境&#34;&gt;部署环境&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Debian11，AMD架构&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;硬盘：推荐nvme SSD，I/O得高，否则任务多了就跟不上，大小建议160或以上&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;机房位置：通常推荐欧洲地区，特别是德国，其次美西，国内机不在本教程范围&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;推荐盒子商：&lt;code&gt;Hetzner&lt;/code&gt;、&lt;code&gt;Netcup&lt;/code&gt;、&lt;code&gt;BuyVM&lt;/code&gt;等，其中BuyVM的附加硬盘I/O较低，建议刷流时限制在&lt;code&gt;3&lt;/code&gt;个任务以内&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;部署步骤&#34;&gt;部署步骤&lt;/h3&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;以后有空可能会写个shell脚本，目前就这样吧&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;基础安装&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apt update &amp;amp;&amp;amp; apt -y upgrade &amp;amp;&amp;amp; apt -y autoremove &amp;amp;&amp;amp; apt install -y curl vim sudo xfsprogs &amp;amp;&amp;amp; mkdir Downloads&amp;amp;&amp;amp; chmod -R 777 ./Downloads&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;安置刷流环境&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bash &amp;lt;(wget -qO- https://raw.githubusercontent.com/jerry048/Dedicated-Seedbox/main/Install.sh) &amp;lt;用戶名稱&amp;gt; &amp;lt;用戶密碼&amp;gt; &amp;lt;緩存大小(單位:MiB)&amp;gt;&#xA;示例：&#xA;bash &amp;lt;(wget -qO- https://raw.githubusercontent.com/jerry048/Dedicated-Seedbox/main/Install.sh) admin adminadmin 512&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;建议选择qBittorrent &lt;code&gt;4.3.8&lt;/code&gt; ，安装 &lt;code&gt;bbrx&lt;/code&gt; 等选项&lt;/p&gt;&#xA;&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;修复DNS缺失（选做）&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo chattr -i /etc/resolv.conf&#xA;rm /etc/resolv.conf  &amp;amp;&amp;amp; echo &amp;#34;nameserver 8.8.8.8&amp;#34; &amp;gt; /etc/resolv.conf &amp;amp;&amp;amp; echo &amp;#34;nameserver 1.1.1.1&amp;#34; &amp;gt; /etc/resolv.conf &amp;amp;&amp;amp; chattr +i /etc/resolv.conf&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;4&#34;&gt;&#xA;&lt;li&gt;其他相关教程&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://vpsceping.org/955.html&#34;&gt;Buyvm VPS挂载外挂硬盘（Block Storage Slabs存储块）方法和刷PT流程&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
