@@ -1,4 +1,4 @@
-theme = "blox"
+theme = "hugo-blox-builder"
 baseURL = 'https://lev1ne.org/'
 languageCode = 'zh-cn'
 title = '➰𝓵𝓮𝓿𝟭𝓷𝓮'
