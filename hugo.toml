@@ -4,7 +4,8 @@ languageCode = 'zh-cn'
 title = '➰𝓵𝓮𝓿𝟭𝓷𝓮'
 
 [module]
-  hugoVersion = ">=0.102.0"
+  [module.hugoVersion]
+    min = ">=0.102.0"
 	
 [params]
   mainSections = ["posts"]
